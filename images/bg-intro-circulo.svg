@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1271" height="1034"
+     viewBox="-200 -200 1671 1434">
+  <defs>
+    <!-- mesmo gradiente -->
+    <linearGradient id="c" x1="0%" x2="99.58%" y1="36.147%" y2="63.736%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#2AB6D9"/>
+    </linearGradient>
+
+    <!-- sombra mais “perto” (menos blur e menos área) -->
+    <filter id="a" width="120%" height="120%" x="-10%" y="-10%" filterUnits="objectBoundingBox">
+      <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="18"/>
+      <feColorMatrix in="shadowBlurOuter1"
+        values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0.06 0"/>
+    </filter>
+
+    <!-- círculo perfeito (anel) -->
+    <!-- centro (635.5, 517) e raios fixos -->
+    <path id="b" fill-rule="evenodd" d="
+      M 635.5 97
+      A 420 420 0 1 1 635.5 937
+      A 420 420 0 1 1 635.5 97
+      Z
+
+      M 635.5 257
+      A 260 260 0 1 0 635.5 777
+      A 260 260 0 1 0 635.5 257
+      Z
+    "/>
+  </defs>
+
+  <g fill="none" fill-rule="evenodd">
+    <!-- base escura + sombra -->
+    <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+    <use fill="#0b1220" xlink:href="#b"/>
+
+    <!-- camada do gradiente deslocada (mesmo “desing”) -->
+    <use fill="url(#c)" xlink:href="#b" transform="translate(140 -240)"/>
+  </g>
+</svg>

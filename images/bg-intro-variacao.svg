@@ -1,0 +1,56 @@
+<!-- bg-intro-geo-variacao-preenchida-sem-corte-left.svg -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1271" height="1034"
+     viewBox="0 0 1271 1034">
+  <defs>
+    <linearGradient id="c" x1="0%" x2="99.58%" y1="36.147%" y2="63.736%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#2AB6D9"/>
+    </linearGradient>
+
+    <!-- sombra com área ampla (não recorta) -->
+    <filter id="a" filterUnits="userSpaceOnUse" x="-500" y="-500" width="2600" height="2400">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="34"/>
+      <feColorMatrix in="shadowBlurOuter1"
+        values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0.03 0"/>
+    </filter>
+
+    <!-- Forma preenchida (sem recorte interno) -->
+    <path id="b" d="
+      M 190 300
+      Q 190 215 275 215
+      L 530 215
+      Q 590 215 630 255
+      L 690 315
+      Q 720 345 760 345
+      L 925 345
+      Q 995 345 1040 390
+      L 1140 490
+      Q 1190 540 1190 610
+      L 1190 720
+      Q 1190 805 1105 805
+      L 850 805
+      Q 790 805 750 765
+      L 690 705
+      Q 660 675 620 675
+      L 455 675
+      Q 385 675 340 630
+      L 240 530
+      Q 190 480 190 410
+      Z"/>
+  </defs>
+
+  <!-- Desloca para a esquerda para não cortar -->
+  <g fill="none" fill-rule="evenodd" transform="translate(-40 0)">
+    <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+    <use fill="#0b1220" xlink:href="#b"/>
+
+    <!-- Gradiente deslocado (mesmo design), agora partindo mais à esquerda -->
+    <use fill="url(#c)" xlink:href="#b" transform="translate(120 -220)"/>
+  </g>
+</svg>
