@@ -81,6 +81,8 @@
   }
 
   .cta img {
-    margin-top: 16px;
+    margin-top: -75px;
+    width: 40%;
+    margin-left: 200px;
   }
 }
