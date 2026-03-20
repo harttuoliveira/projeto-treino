@@ -2,6 +2,11 @@
 
 @media (max-width: 768px) {
 
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
   body {
     display: block;
   }
@@ -31,6 +36,7 @@
   nav ul {
     gap: 18px;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .hero {
@@ -52,7 +58,7 @@
   }
 
   .planos {
-    
+    gap: 16px;
   }
 
   .planos .card {
@@ -61,7 +67,20 @@
     margin: 0 auto;
   }
 
+  .depoimento {
+    margin: 32px 0;
+  }
+
   .depoimento .card {
     display: none;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .cta img {
+    margin-top: 16px;
   }
 }
