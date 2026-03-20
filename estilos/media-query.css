@@ -20,6 +20,11 @@
     border: none;
   }
 
+  .btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+
   .card {
     padding: 16px;
   }
@@ -83,6 +88,6 @@
   .cta img {
     margin-top: -75px;
     width: 40%;
-    margin-left: 150px;
+    margin-left: 154px;
   }
 }
